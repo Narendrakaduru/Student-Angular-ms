@@ -1,0 +1,16 @@
+<div style="width: 600px;">
+    <div class="container-fluid">
+        <h3>Add Student</h3>
+        <form #fromSaveStudent="ngForm" (submit)="onSaveStudentClick(fromSaveStudent.value)">
+            <dl>
+                <dt>RollNo</dt>
+                <dd><input type="text" name="rollNo" ngModel #rollNo="ngModel"></dd>
+                <dt>Name</dt>
+                <dd><input type="text" name="name" ngModel #name="ngModel"></dd>
+                <dt>Address</dt>
+                <dd><input type="text" name="address" ngModel #address="ngModel"></dd>
+            </dl>
+            <button class="btn btn-info">Add Student</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div style="width: 600px;">
+    <div class="container-fluid">
+        <h3>Update Student</h3>
+        <form #fromUpdateStudent="ngForm" (submit)="onUpdateStudentClick(fromUpdateStudent.value)">
+            <dl>
+                <dt>RollNo</dt>
+                <dd><input type="text" name="rollNo" ngModel #rollNo="ngModel"></dd>
+                <dt>Name</dt>
+                <dd><input type="text" name="name" ngModel #name="ngModel"></dd>
+                <dt>Address</dt>
+                <dd><input type="text" name="address" ngModel #address="ngModel"></dd>
+            </dl>
+            <button class="btn btn-info">Update Student</button>
+        </form>
+    </div>
+</div>

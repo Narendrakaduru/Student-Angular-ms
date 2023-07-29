@@ -1,0 +1,21 @@
+<div style="width: 600px;">
+    <div class="container-fluid">
+        <h2>Student Details</h2>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>RollNo</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of GetAllStudents">
+                    <td>{{item.rollNo}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.address}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

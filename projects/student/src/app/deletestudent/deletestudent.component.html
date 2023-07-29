@@ -1,0 +1,12 @@
+<div style="width: 600px;">
+    <div class="container-fluid">
+        <h3>Delete Student</h3>
+        <form #fromDeleteStudent="ngForm" (submit)="onDeleteStudentClick(fromDeleteStudent.value)">
+            <dl>
+                <dt>RollNo</dt>
+                <dd><input type="text" name="rollNo" ngModel #rollNo="ngModel"></dd>
+            </dl>
+            <button class="btn btn-info">Delete Student</button>
+        </form>
+    </div>
+</div>

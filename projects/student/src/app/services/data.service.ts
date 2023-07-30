@@ -7,18 +7,18 @@ import { Observable } from 'rxjs';
 })
 
 export class DataService{
-
+    private URL = "http://localhost:8080";
     constructor(private http: HttpClient){}
     SaveStudent(data:any):Observable<any>{
-        return this.http.post<any>('http://localhost:8080/saveStudent',data);
+        return this.http.post<any>(`${this.URL}/saveStudent`,data);
     }
     UpdateStudent(data:any):Observable<any>{
-        return this.http.put<any>('http://localhost:8080/updateStudent',data);
+        return this.http.put<any>(`${this.URL}/updateStudent`,data);
     }
-    DeleteStudent(rollNo: any){
-        return this.http.delete("http://localhost:8080/deleteStudent/" + rollNo);
+    DeleteStudent(rollNo: any):Observable<any>{
+        return this.http.delete(`${this.URL}/deleteStudent/` + rollNo);
     }
     GetAllStudents():Observable<any[]> {
-        return this.http.get<any>('http://localhost:8080/getAllStudents');
+        return this.http.get<any>(`${this.URL}/getAllStudents`);
     }
 }
